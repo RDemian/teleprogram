@@ -1,0 +1,43 @@
+@import '../../../assets/styles/theme.scss';
+
+.ChannelItem {
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed $second;
+  border-radius: 10px;
+  padding: 5px;
+
+  &__desc {
+    padding: 15px;
+  }
+
+  &__descBtn {
+    margin: 5px 0;
+    font-size: 12px;
+    line-height: 1;
+    color: $fifth;
+  }
+
+  &__title {
+    display: grid;
+    grid-template-columns: 90px 1fr 20px 1px;
+    grid-column-gap: 20px;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+
+    @media (max-width: 800px) {
+      grid-template-columns: 90px minmax(110px, 1fr) 20px 1px;
+      grid-column-gap: 10px;
+    }
+  }
+
+  &__titleLogo {
+    width: 90px;
+    height: 90px;
+  }
+
+  &__btnWrap {
+    margin: 0 0 10px 0;
+  }
+}

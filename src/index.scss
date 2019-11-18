@@ -1,0 +1,21 @@
+@import './assets/styles/fonts.scss';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto Regular", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #101118;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+

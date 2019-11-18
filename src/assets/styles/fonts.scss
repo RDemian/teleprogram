@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/roboto-regular.woff") format("woff"),
+  url("../fonts/roboto-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("../fonts/roboto-medium.woff") format("woff"),
+  url("../fonts/roboto-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../fonts/roboto-light.woff") format("woff"),
+  url("../fonts/roboto-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Icomoon";
+  src: url("../fonts/icomoon.svg") format("svg"),
+  url("../fonts/icomoon.woff") format("woff"),
+  url("../fonts/icomoon.eot") format("embedded-opentype"),
+  url("../fonts/icomoon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'Icomoon' !important;
+    speak: none;
+    font-style:normal;
+    font-weight:normal;
+}
+
+.icon-arrow-down:before {
+  content: "\e653";
+}
+
+.icon-arrow-left:before {
+  content: "\e65c";
+}
+
+.icon-arrow-right:before {
+  content: "\e65d";
+}
+
+.icon-arrow-up:before {
+  content: "\e656";
+}
