@@ -47,6 +47,7 @@ class Teleprograms extends Component {
         this.endTime = moment().endOf('day').format('YYYY-MM-DD HH:mm');
         this.timerId = null;
         this.firstScroll = true;
+        this.fetchData = true;
         this.currentProgram = React.createRef();
         this.programList = React.createRef();
     }
@@ -60,9 +61,12 @@ class Teleprograms extends Component {
         const { selectedChannelId, teleprograms, fetching } = this.props;
         
         const isPrevProgramsEmpty = !get(prevProps, 'teleprograms.length');
+        const isNewChannelId = prevProps.selectedChannelId !== selectedChannelId;
         const hasPrograms = get(teleprograms, 'length');
-        
-        if (selectedChannelId && !hasPrograms && !fetching) {
+        const fetchData = isNewChannelId || this.fetchData;
+                
+        if (fetchData && selectedChannelId && !hasPrograms && !fetching) {
+            this.fetchData = false;
             this.getTeleprogramsList(this.prepareParams(selectedChannelId));
         }
         if ((isPrevProgramsEmpty || this.firstScroll) && hasPrograms) {
@@ -77,7 +81,7 @@ class Teleprograms extends Component {
 
     scrollListToElem = () => {
         const currentProgramNode = ReactDOM.findDOMNode(get(this.currentProgram, 'current'));
-        const heightHeader = 80;
+        const heightHeader = 90;
         if (currentProgramNode) {
             const top = currentProgramNode.getBoundingClientRect().top;
             const programList = this.programList.current;
@@ -158,7 +162,7 @@ class Teleprograms extends Component {
         const { currentTime } = this.state;
 
         const displayTeleprogram = this.searchList(teleprograms);
-
+        
         return (
             <React.Fragment>
                 {isWidthTablet && (
