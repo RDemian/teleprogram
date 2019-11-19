@@ -1,13 +1,13 @@
 @import '../../assets/styles/theme.scss';
 
 .Teleprograms {
+    flex: 1 1 200px;
     display: flex;
     flex-direction: column;
-    height: 95vh;
+    height: 99vh;
     overflow: hidden;
     background-color: $third;
     box-shadow: 0 0 5px $first;
-    
 
     &__header {
         margin-bottom: 10px;
@@ -17,14 +17,14 @@
 
     &__title {
         margin-bottom: 10px;
-        font-family: "Roboto Medium";
+        font-family: "Roboto Medium", "Arial", sans-serif;
         color: $third;
         text-transform: uppercase;
     }
 
     &__ul {
-        display: grid;
-        grid-row-gap: 20px;
+        display: flex;
+        flex-direction: column;
         margin: 25px 0;
         padding: 0 20px;
         list-style: none;

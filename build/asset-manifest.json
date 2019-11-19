@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.59b9a778.chunk.css",
+    "main.css": "/static/css/main.bcb79e9f.chunk.css",
     "main.js": "/static/js/main.a4540207.chunk.js",
     "main.js.map": "/static/js/main.a4540207.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7cd54de2.js",
@@ -8,15 +8,15 @@
     "static/js/2.ca0761fd.chunk.js": "/static/js/2.ca0761fd.chunk.js",
     "static/js/2.ca0761fd.chunk.js.map": "/static/js/2.ca0761fd.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.a0185d176a5e432bcd573aee5e5e182d.js": "/precache-manifest.a0185d176a5e432bcd573aee5e5e182d.js",
+    "precache-manifest.cd74600f91f324e576a4dc5e9cb20b42.js": "/precache-manifest.cd74600f91f324e576a4dc5e9cb20b42.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.59b9a778.chunk.css.map": "/static/css/main.59b9a778.chunk.css.map",
+    "static/css/main.bcb79e9f.chunk.css.map": "/static/css/main.bcb79e9f.chunk.css.map",
     "static/media/index.scss": "/static/media/roboto-regular.20c972d8.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.7cd54de2.js",
     "static/js/2.ca0761fd.chunk.js",
-    "static/css/main.59b9a778.chunk.css",
+    "static/css/main.bcb79e9f.chunk.css",
     "static/js/main.a4540207.chunk.js"
   ]
 }

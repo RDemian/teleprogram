@@ -1,12 +1,19 @@
 @import '../../assets/styles/theme.scss';
 
 .Channels {
+    flex: 1 1 300px;
     display: flex;
     flex-direction: column;
-    height: 95vh;
+    margin-right: 5px;
+    max-width: 40%;
+    height: 99vh;
     overflow: hidden;
     background-color: $third;
     box-shadow: 0 0 5px $first;
+
+    @media (max-width: 800px) {
+        max-width: none;
+    }
     
 
     &__header {
@@ -17,14 +24,14 @@
 
     &__title {
         margin-bottom: 10px;
-        font-family: "Roboto Medium";
+        font-family: "Roboto Medium", "Arial", sans-serif;
         color: $third;
         text-transform: uppercase;
     }
 
     &__ul {
-        display: grid;
-        grid-row-gap: 20px;
+        display: flex;
+        flex-direction: column;
         margin: 25px 0;
         padding: 0 20px;
         list-style: none;

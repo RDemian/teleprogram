@@ -1,21 +1,7 @@
 @import '../../assets/styles/theme.scss';
 
 .App {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-column-gap: 10px;
-    padding: 10px;
+    display: flex;
     background-color: $fifth;
-
-    @media (max-width: 1200px) {
-        grid-template-columns: 1.3fr 2fr;
-    }
-
-    @media (max-width: 1024px) {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @media (max-width: 800px) {
-        grid-template-columns: 1fr;
-    }
+    height: 100vh;
 }
