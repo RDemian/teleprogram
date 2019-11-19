@@ -32,7 +32,7 @@ export class TeleprogramItem extends React.PureComponent {
         const { item, isFinish, isContinue, percent } = this.props;
         const { active } = this.state;
         const { start, desc, title } = item;
-        const startTime = moment(start).format('HH:mm');
+        const startTime = start ? moment(start).format('HH:mm') : '';
         
         let currentElemStyle = {};
         if (isContinue) {

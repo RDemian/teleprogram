@@ -1,4 +1,5 @@
 import * as api from '../../api';
+import isEmpty from 'lodash/isEmpty';
 
 export const TYPES = {
     TELEPROGRAMS_FETCH: 'TELEPROGRAMS_FETCH',
@@ -18,6 +19,11 @@ export function fetchList(params) {
 
         try {
             const list = await api.getTeleprograms(params);
+            if (isEmpty(list)) {
+                list[params.xvid] = [{
+                    title: 'Телепрограммы нет',
+                }];
+            }
             dispatch({
                 type: TYPES.TELEPROGRAMS_SUCCESS,
                 payload: {
