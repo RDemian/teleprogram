@@ -7,13 +7,14 @@ const initialState = {
 }
 
 export default function reducer(state = initialState, action) {
-    switch(action.type) {
+    const { type, payload } = action;
+    switch(type) {
         case TYPES.CHANNELS_FETCH:
-            return {...state, ...action.payload}
+            return {...state, ...payload}
         case TYPES.CHANNELS_SUCCESS:
-            return {...state, ...action.payload}
+            return {...state, ...payload}
         case TYPES.CHANNELS_ERROR:
-            return {...state, ...action.payload}
+            return {...state, ...payload}
         default:
             return state;
     }

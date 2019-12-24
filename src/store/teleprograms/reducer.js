@@ -7,14 +7,15 @@ const initialState = {
 }
 
 export default function reducer(state = initialState, action) {
-    switch(action.type) {
+    const { type, payload } = action;
+    switch(type) {
         case TYPES.TELEPROGRAMS_FETCH:
-            return {...state, ...action.payload}
+            return {...state, ...payload}
         case TYPES.TELEPROGRAMS_SUCCESS:
-            const {fetching, fetchError, items} = action.payload;
+            const {fetching, fetchError, items} = payload;
             return {...state, fetching, fetchError, items: {...state.items, ...items}}
         case TYPES.TELEPROGRAMS_ERROR:
-            return {...state, ...action.payload}
+            return {...state, ...payload}
         default:
             return state;
     }
